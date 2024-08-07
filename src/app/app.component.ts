@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
 @Component({
@@ -6,8 +6,13 @@ import { RouterOutlet } from '@angular/router';
   standalone: true,
   imports: [RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrl: './app.component.scss',
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'arsh-portfolio';
+
+  ngOnInit(): void {
+    
+  }
 }
